@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio do Restaurante</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #004c3f;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 24px;
+        }
+        #menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .meal {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex-basis: 30%;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .meal img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .meal h2 {
+            color: #004c3f;
+            margin: 0.5em 0;
+        }
+        .description {
+            color: #666;
+            font-size: 14px;
+        }
+        .speak {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #004c3f;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .speak:hover {
+            background-color: #003429;
+        }
+    </style>
+</head>
+<body>
+    <header>Cardápio do Restaurante</header>
+    <div id="menu">
+        <div class="meal">
+            <img src="1.PNG" alt="Arroz com carne">
+            <h2>Arroz com carne</h2>
+            <p class="description">Frangoe arroz.</p>
+            <span class="speak" onclick="speak('batata palha, arroz, salada')">Ouvir Componentes</span>
+        </div>
+        <div class="meal">
+            <img src="2.PNG" alt="Feijoada">
+            <h2>Feijoada</h2>
+            <p class="description">Feijão preto, carne de porco, linguiça, bacon, arroz, farofa e couve.</p>
+            <span class="speak" onclick="speak('Feijão preto, carne de porco, linguiça, bacon, arroz, farofa e couve')">Ouvir Componentes</span>
+        </div>
+        <div class="meal">
+            <img src="3.PNG" alt="Lasanha de Carne">
+            <h2>Lasanha de Carne</h2>
+            <p class="description">Massa, carne moída, molho de tomate, queijo e presunto.</p>
+            <span class="speak" onclick="speak('Massa, carne moída, molho de tomate, queijo e presunto')">Ouvir Componentes</span>
+        </div>
+        <div class="meal">
+            <img src="4.PNG" alt="Bife à Parmegiana">
+            <h2>Bife à Parmegiana</h2>
+            <p class="description">Bife, queijo, molho de tomate, arroz e batata frita.</p>
+            <span class="speak" onclick="speak('Bife, queijo, molho de tomate, arroz e batata frita')">Ouvir Componentes</span>
+        </div>
+        <div class="meal">
+            <img src="5.PNG" alt="Salmão grelhado">
+            <h2>Salmão Grelhado</h2>
+            <p class="description">Salmão, azeite, alho, limão, arroz integral e legumes.</p>
+            <span class="speak" onclick="speak('Salmão, azeite, alho, limão, arroz integral e legumes')">Ouvir Componentes</span>
+        </div>
+        <div class="meal">
+            <img src="6.PNG" alt="Pizza Margherita">
+            <h2>Pizza Margherita</h2>
+            <p class="description">Massa de pizza, molho de tomate, queijo mozzarella, tomate e manjericão.</p>
+            <span class="speak" onclick="speak('Massa de pizza, molho de tomate, queijo mozzarella, tomate e manjericão')">Ouvir Componentes</span>
+        </div>
+        <div class="meal">
+            <img src="7.PNG" alt="Camarão à Provençal">
+            <h2>Camarão à Provençal</h2>
+            <p class="description">Camarão, alho, azeite, salsinha e arroz de alho.</p>
+            <span class="speak" onclick="speak('Camarão, alho, azeite, salsinha e arroz de alho')">Ouvir Componentes</span>
+        </div>
+        <div class="meal">
+            <img src="8.PNG" alt="Risoto de Funghi">
+            <h2>Risoto de Funghi</h2>
+            <p class="description">Arroz, carne e batata.</p>
+            <span class="speak" onclick="speak('Arroz, carne e batata')">Ouvir Componentes</span>
+        </div>
+        <div class="meal">
+            <img src="9.PNG" alt="Frango Xadrez">
+            <h2>Frango Xadrez</h2>
+            <p class="description">Frango, amendoim e arroz branco.</p>
+            <span class="speak" onclick="speak('Frango, amendoim e arroz branco')">Ouvir Componentes</span>
+        </div>
+    </div>
+
+    <script>
+        function speak(text) {
+            var msg = new SpeechSynthesisUtterance(text);
+            msg.lang = 'pt-BR';  // Define o idioma para português do Brasil
+            window.speechSynthesis.speak(msg);
+        }
+    </script>
+</body>
+</html>
